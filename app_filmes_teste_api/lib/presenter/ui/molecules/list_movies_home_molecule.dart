@@ -74,7 +74,7 @@ class _ListMoviesHomeMoleculeState extends State<ListMoviesHomeMolecule> {
                 );
               } else {
                 final genre = _genres[index];
-                final movies = _blocMovie.movieHomePage.where((element) => element.GenreID.contains(genre.id));
+                final movies = _blocMovie.movieHomePage.where((element) => element.genreID.contains(genre.id));
 
                 return Column(
                   children: [
