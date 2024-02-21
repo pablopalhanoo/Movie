@@ -24,7 +24,7 @@ class GenreBloc extends Bloc<GenreEvent, GenreState> {
       emit(GenreLoading(genre: _genre));
       final result = await _repository.getAllGenreMovie();
 
-      _genre.addAll(result as Iterable<GenreEntity>);
+      _genre.addAll(result);
 
       emit(GenreLoaded(genre: _genre));
     } catch (e) {
